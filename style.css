@@ -448,11 +448,22 @@ footer {
 /* Responsive */
 @media (max-width: 950px) {
   .hero-inner {
-    grid-template-columns: 1fr auto; /* left content gets max width, image takes only what it needs */
-    gap: 50px; /* extra gap so name + sub fits better */
+    grid-template-columns: 1fr; /* stack text + image vertically */
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero-portrait { 
+    justify-self: center; 
+    max-width: 250px;   /* smaller image size for mobile */
+    margin: 0 auto;
+    transform: none;    /* remove extra shift that hides it */
+  }
+
+  .hero-actions { 
+    justify-content: center; 
+  }
 }
-  .hero-portrait { justify-self: center; max-width: 360px; }
-  .hero-actions { justify-content: flex-start; }
-}
+
 
 
